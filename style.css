@@ -1,0 +1,223 @@
+/*Commentaire*/
+
+body {
+    background-color: antiquewhite;
+}
+
+.platdujour {
+    color: blueviolet;
+}
+
+.classtest {
+    color: brown;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    font-size: 1.2em;
+    margin: 15px;
+}
+
+h1, h2, caption {
+    font-family: "Playwrite GB S", sans-serif;
+    color: blueviolet;
+}
+
+h2 {
+    font-size: 2em;
+    font-style: italic;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    padding: 50px;
+    /*background-image: url(images/banniere.jpg);
+    background-size: cover;
+    background-position: top;
+    opacity: 0.8;
+    background: linear-gradient(to right, #ffffff, #ffe984, #f1b567);*/
+    text-shadow: 6px 6px 15px grey;
+}
+
+p, ul {
+    color: royalblue;
+}
+
+.lien {
+    background-color: bisque;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 30% 70% 70% 30% / 29% 30% 70% 71% ;
+    box-shadow: 6px 6px 15px black;
+    margin-bottom: 50px;
+    padding: 25px;
+}
+
+img:hover {
+    opacity: 0.5;
+}
+
+a:hover {
+    color: deeppink;
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration-color: blueviolet;
+}
+
+a:focus {
+    background-color: #1d313f;
+    color: white;
+    outline-color: deeppink;
+}
+
+img {
+    height: 10%;
+    width: 10%;
+}
+
+section {
+    padding: 25px;
+    margin: 10px;
+}
+
+.conteneur {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 20px;
+    border: 2px solid black;
+    border-radius: 25% 10%;
+    box-shadow: 6px 6px 15px black;
+    margin: 100px;
+    /*align-items: center;*/
+}
+
+/*.one {
+    order: 1;
+}
+
+.two {
+    order: 2;
+}
+
+.three {
+    order: 3;
+    flex: 2;
+}
+    */
+
+
+/*
+La pseudo-classe :hover   modifie l'apparence d'un élément au survol.
+La pseudo-classe :active  modifie l'apparence des liens hypertextes au moment du clic.
+La pseudo-classe :visited modifie l'apparence des liens hypertextes lorsqu'un lien a déjà été visité.
+La pseudo-classe :focus  modifie l'apparence d'un élément sélectionné via la touche "tab".
+*/
+
+.conteneur2 {
+    display: grid;
+    grid-template-columns: 40fr 2fr 0.2fr;
+    grid-template-rows: 150px, 300px 300px;
+    gap: 20px;
+}
+
+footer{
+    padding-left: 5px;
+}
+
+.oneconteneur2 {
+    order: 1;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.twoconteneur2 {
+    order: 2;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+
+.threeconteneur2 {
+    order: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+/*a {
+    display: inline-block;
+    width: 1000px;
+}*/
+
+
+td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td, th {
+    padding: 15px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid black;
+    outline: none;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+fieldset {
+    background-color: #BAC9CE;
+}
+
+legend {
+    background-color: white;
+}
+
+@media screen  and (max-width: 1200px){
+    p {
+        color: black;
+    }
+    
+}
+
+
+@media screen and (max-width: 100px) {
+    .conteneur {
+        flex-direction: column;
+    }
+
+    footer {
+        display: none;
+    }
+
+    p{
+        overflow: scroll;
+    }
+    
+}
+
+

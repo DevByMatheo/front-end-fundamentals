@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<!--Commentaire-->
+
+<html>
+    <head>
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Restaurant</title>
+        <link rel="stylesheet" href="style.css"/>
+        <!--Google Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <h1>☀️ Mon Restaurant</h1>
+        </header>
+
+            <nav>
+                <div class="lien">
+                    <a href="#entrée">Voir nos entrées</a><br>
+                    <a href="#plat">Voir nos plats</a><br>
+                    <a href="#dessert">Voir nos desserts</a>
+                </div>
+            </nav>
+            
+            <br>    
+
+        <div class="conteneur2">
+            <main >
+                <aside class="twoconteneur2">
+                    <a href="images/restaurant.jpg" target="_blank">
+                        <img src="images/restaurant.jpg" alt="Photo du restaurant" title="restaurant">
+                    </a>
+                </aside>
+
+                <div class="conteneur" class="oneconteneur2">
+                    <section class="one">
+                        <h2 id="entrée">Entrées</h2>
+                        <p>De nos jours, l'entrée est souvent <span class="classtest">le premier plat</span> servi d'un menu. Elle précède directement le plat principal. 
+                            D'une grande diversité, les entrées sont des plats cuisinés chauds (vol-au-vent, bouchées, soufflés) ou froids (viandes froides, pâtés).</p>
+
+                        <ul>
+                            <li>Soupe aux 5 légumes</li>
+                            <li>Velouté potimarron</li>
+                            <li>Salade Japonaise</li>
+                            <li>Brick de ton</li>
+                            <li>Olive fait maison</li>
+                        </ul>
+                    </section>
+
+                    <section class="two">
+                        <h2 id="plat">Plats</h2>
+                        <p>Un plat en gastronomie est une préparation alimentaire spécifique, un « article distinct ou une variété d'aliment », prêt à être consommé ou à être servi .</p>
+
+                        <ul>
+                            <li class="platdujour">
+                                <em><strong>Plat du jour:</em></strong><br>
+                                Patates douces sautées aux épices
+                                <ol>
+                                    <li>Patate(s) douce(s)</li>
+                                    <li>Thym frais</li>
+                                    <li>Huile d'olive</li>
+                                    <li>Sumac</li>
+                                    <li>Cumin</li>
+                                    <li>Graine de coriandre</li>
+                                    <li>Piment de cayenne</li>
+                                </ol>
+
+                            </li><br>
+
+                            <li>Potiron au four</li>
+                            <li>Cordons-Bleus au four</li>
+                            <li>Tendre lentilles aux carottes</li>
+                            <li>Blaquette de poulet</li>
+                            <li>Pommes de terre farcis</li>
+                        </ul>
+                    </section>
+
+                    <section class="three">
+                        <h2 id="dessert">Desserts</h2>
+                        <p>Le dessert est le deuxième plat du repas. 
+                            Il est composé d'aliments importants en ce qui a trait à l'équilibre alimentaire et il complète les portions servies dans l'assiette principale. 
+                            Un fruit frais est le plus simple et le plus rapide à préparer.</p>
+
+                        <ul>
+                            <li>Cake Sucré</li>
+                            <li>Crumble sucré</li>
+                            <li>Mousse dessert</li>
+                            <li>Flan et clafoutis</li>
+                            <li>Tiramisu</li>
+                        </ul>
+                    </section>
+                </div>
+            
+            <table>
+                <caption>Menu du jour :</caption>
+                <tr>
+                    <th>Menu 1</th>
+                    <th>Menu 2</th>
+                    <th>Menu 3</th>
+                </tr>
+                <tr>
+                    <td>Soupe aux 5 légumes</td>
+                    <td>Salade Japonaise</td>
+                    <td>Brick de ton</td>
+                </tr>
+                <tr>
+                    <td>Potiron au four</td>
+                    <td>Blaquette de poulet</td>
+                    <td>Pommes de terre farcis</td>
+                </tr>
+                <tr>
+                    <td>Tiramisu</td>
+                    <td>Mousse dessert</td>
+                    <td>Cake Sucré</td>
+                </tr>
+            </table>
+
+            <section>
+                <form action="" method="get"> <!--method="post"-->
+                    <fieldset>
+                        <legend>Vos coordonnées</legend>
+                        <label for="prenom">Votre prénom</label>
+                        <input type="text" name="prenom" id="prenom" placeholder="Ex. : Mathieu" size="30" maxlength="20">
+                        <label for="nom">Votre nom</label>
+                        <input type="text" name="nom" id="nom" placeholder="Ex. : Dupond" size="30" maxlength="20">
+                        <label for="email">Votre mail</label>
+                        <input type="email" name="email" id="email" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Contact</legend>
+                        <label for="questions"> Vos questions</label>
+                        <textarea id="questions" rows="4" autofocus></textarea>
+                        <div>Comment sougaitez vous être contacté ?</div>
+                        <input type="radio" name="preference" value="tel" id="tel"/><label for="tel">Par téléphone</label>
+                        <input type="radio" name="preference" value="mail" id="mail"/><label for="mail">Par email</label>
+                    </fieldset>
+                    <input type="submit" value="Envoyer"/>
+                </form>
+                <!--https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3/8061492-creez-des-formulaires#/id/r-8061478-->
+            </section>
+
+            </main>
+
+        </body>
+
+        <footer class="threeconteneur2">
+            <a href="https://www.instagram.com/math.tlse/" target="_blank">Instagram</a>
+            <a href="https://github.com/DevByMatheo" target="_blank">Github</a>
+        </footer>
+    </div>
+</html>
