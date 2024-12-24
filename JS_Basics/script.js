@@ -6,20 +6,20 @@
     prompt()
     parseInt()
 */ 
- 
+
 //const PI = 3.14; -> valeur constant mais contenu modifiable pour tableaux / objet, ...
 
 // document.write(age++); l'incrémentation age +1 se fait ap l'affichage != ++age
 // === Egalité valeur et type / !== type ou valeur -> True
 
 
-// variable condition et opératuer
+// variable condition et opérateur
 
 let nom = "Mathéo";
 
 if(nom == "Mathéo") {
     document.write("OUI");
-    let age = prompt("Comment âges as tu ? ");
+    let age = prompt("Quel âges as tu ? ");
     age = parseInt(age);
 
     if( 0 < age && age <= 18 ) {
