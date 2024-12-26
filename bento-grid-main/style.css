@@ -1,0 +1,114 @@
+@font-face {
+    font-family: "DMSans";
+    src: url(./assets/fonts/static/DMSans-Medium.ttf) format("truetype");
+}
+
+body {
+    margin: 150px;
+    font-size: 18px;
+    font-family: "DMSans";
+    background-color:  rgb(229, 233, 233);
+}
+
+.create {
+    background-color: hsl(31, 66%, 93%);
+}
+
+.write, .maintain {
+    background-color: hsl(39, 100%, 71%);
+}
+
+.manage, .faster {
+    background-color: white;
+}
+
+.social, .grow {
+    background-color: hsl(256, 67%, 59%);
+    color: white;
+}
+
+.schedule {
+    background-color: hsl(254, 88%, 90%);
+}
+
+
+/* Flexbox */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.flex-item {
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    gap: 20px;
+    justify-content: space-between;
+    text-align: center;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+
+.three .schedule {
+    flex: 0 1 49%;
+    box-sizing: border-box;
+}
+
+
+.one, .two, .three {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    box-sizing: border-box;
+    min-height: 500px;
+}
+
+.one {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-direction: column;
+    flex: 0 1 24%;
+    box-sizing: border-box;
+}
+
+.two {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-direction: column;
+    flex: 0 1 49%; 
+    box-sizing: border-box;
+
+}
+
+.three {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-direction: column;
+    flex: 0 1 24%; 
+    box-sizing: border-box;
+}
+
+.flex-item img {
+    width: auto; 
+    max-width: 100%;
+}
+
+.rowint  {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+section.three {
+    margin-bottom: 0%;
+}

@@ -144,3 +144,66 @@ Méthodes
 */ 
 
 d.setFullYear(2007); // changer année
+
+
+// ENSEMBLE
+
+let someSet = new Set([1, "bonjour", new Date()]); // valeur unique
+
+someSet.add(4);
+someSet.delete(1);
+
+for(element of someSet)
+    document.write("<p>" + element + "</p>");
+
+if(someSet.has("bonjour")){
+    document.write("Youpi");
+}
+
+const iterValues = someSet.values(); // keys()
+document.write("<br>" + iterValues.next().value);
+
+document.write("<br>" + someSet.size);
+
+function show(value2){
+    document.write("<p>" + value2 + "</p>")
+}
+someSet.forEach(show)
+
+someSet.clear();
+
+
+// MAP
+
+let something = {one: "One", two: "Two"};
+
+let someMap = new Map();
+
+someMap.set(1, "Un");
+someMap.set(2, "Deux")
+
+if(someMap.has(1)){ // cle
+    document.write("Youpi");
+}
+
+document.write(someMap.get(1)) // -> Un
+
+const it = someMap.keys(); // ou .values()
+document.write(it.next().value);
+document.write(it.next().value);
+
+const allEntries = someMap.entries();
+for(entries of allEntries){
+    document.write("<p>" + entries[0] + " > " + entries[1] + "</p>") // cle > valeur
+}
+// ou
+
+function shows(valuess, keyss){
+    document.write("<p>" + keyss + " > " + valuess + "</p>")
+}
+someMap.forEach(shows)
+
+someMap.delete(2) //cle
+
+document.write(someMap.size);
+someMap.clear()
