@@ -197,7 +197,6 @@ for(entries of allEntries){
     document.write("<p>" + entries[0] + " > " + entries[1] + "</p>") // cle > valeur
 }
 // ou
-
 function shows(valuess, keyss){
     document.write("<p>" + keyss + " > " + valuess + "</p>")
 }
