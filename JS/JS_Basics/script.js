@@ -19,7 +19,7 @@ let nom = "Mathéo";
 
 if(nom == "Mathéo") {
     document.write("OUI");
-    let age = prompt("Quel âges as tu ? ");
+    let age = 18; // let age = prompt("Quel âges as tu ? ");
     age = parseInt(age);
 
     if( 0 < age && age <= 18 ) {
@@ -111,3 +111,4 @@ document.write(somme(1)) ;
 //let sum2 = function(x, y){return x + y;}; ou
 let sum2 = (x, y) => {return x + y};
 document.write(sum2(1,9));
+

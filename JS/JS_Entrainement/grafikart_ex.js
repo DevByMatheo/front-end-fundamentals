@@ -65,6 +65,7 @@ let ArrayMoyenne = [...moyMap.entries()].sort((a,b) => b[1] - a[1]);
 // ArrayMoyenne.slice(0, 3).forEach(students => console.log(`${students[0]} : ${students[1]}`))
 
 
+
 // Class
 
 class Rectangle{
@@ -107,10 +108,14 @@ class Book{
     }
 
     nextPage(){
-        this.page += 1;
-        return `Vous êtes à la page ${this.page}`;
+        if(this.nbpages < this.nbpages){
+            this.page += 1;
+            return `Vous êtes à la page ${this.page}`;
+        } else {
+            return "Vous avez finis le livre";
+        }
     }
-
+ 
     close(){
         this.page = 0;
     }
@@ -136,7 +141,7 @@ class Library{
     }
 
 }
-
+/*
 const b = new Book('Seigneur des anneaux', 200);
 console.log(b.page)
 b.nextPage()
@@ -153,4 +158,24 @@ l.addBooks([
 ])
 
 
-console.log(l.findBooksByLetter('S'))
+console.log(l.findBooksByLetter('S'))*/
+
+ 
+// Asynchrome
+
+function decompte(n) {
+    let i = 0
+    setTimeout(() => {
+        console.log(n - i);
+        i++
+        setTimeout(() => {
+            console.log(n - i);
+            i++
+            setTimeout(() => {
+                console.log(n - i);
+            }, 1000)
+        }, 1000)
+    }, 1000)
+}
+
+// decompte(3)

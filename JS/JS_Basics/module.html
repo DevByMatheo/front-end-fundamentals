@@ -14,5 +14,15 @@
 
     <body>
         <h1>Javascript</h1>
-        <script src="asynchrone.js"></script>
+        <!--<script src="module.js"></script>-->
+        <script type="module">
+            // import {sum as somme, default as hello} from "./module.js"
+            import * as A from "./module.js"
+            import hello from "./module.js"
+
+            console.log(A.sum([12,23,19]));
+            console.log(hello());
+        </script>
+    </body>
+
 </html>
