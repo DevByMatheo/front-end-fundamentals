@@ -7,18 +7,42 @@
         <meta name="viewport" content="width=device-width" />
         <title>Ma page web</title>
         <style>
-            body{background-color: #111; color: #e2a93f; margin: auto; width: 800px;}
+            body{color: #e2a93f; margin: auto; width: 800px;}
             h1 {color: #af8943; text-align: center;}
-            .red {color: red;}
+            .spoiler{
+                background-color: black;
+                color: black;
+                cursor: pointer;
+            }
+            .spoiler::selection{
+                color: rgba(0,0,0,0);
+            }
+            span {
+                transition: .3s;
+            }
         </style>
         <script src="./script.js" defer></script>
     </head>
 
     <body>
-        <h1>Javascript</h1>
+        <section class="section1" style="background-color: black;">
+            <h1>Javascript</h1>
 
-        <div id="lastPosts"></div>
-        </ul>
+            <div id="lastPosts"></div>
+        </section>
+
+        <section class="section2" style="background-color: white; color: black;">
+            <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, possimus aliquid sit natus reiciendis molestias rem perferendis labore assumenda fugit, 
+            quos quis illum voluptas, minima impedit fugiat fuga tempore animi! <span class="spoiler"> magni beatae modi eligendi doloribus optio enim qui necessitatibus</span>. 
+            Veniam ab reprehenderit quis perspiciatis beatae provident laudantium quisquam dolorum iste porro reiciendis consequuntur, dolores vero doloribus expedita suscipit ut.
+            Magni sunt nisi natus fugiat laboriosam minima porro adipisci <span class="spoiler">exercitationem cupiditate qui consectetur maxime sequi</span> laborum cum facilis, 
+            id ipsa rerum dicta aspernatur culpa? Neque amet alias provident delectus dolorum. Sunt dicta, nam, voluptatem consequuntur magni doloribus tempore 
+            excepturi illum possimus reiciendis delectus. <span class="spoiler">velit rem in quisquam atque provident, quasi doloribus</span> , voluptate sapiente perferendis, 
+            iste deserunt dicta laboriosam corrupti.
+        </p>
+
+        </section>
     </body>
 
 </html>

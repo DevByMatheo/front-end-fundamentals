@@ -75,3 +75,108 @@ lis[1].remove(); // Supprime le 2ème <li>
 // Vérification d'appartenance
 console.log(ul[0].contains(lis[0])); // Vérifie si lis[0] est un enfant de ul[0]
 
+
+// Ecouteur d'évènement
+
+/**
+ * Fonction exécutée lorsqu'un bouton est cliqué.
+ * @param {PointerEvent} event - L'événement déclenché par l'interaction utilisateur.
+ */
+function onButtonClick(event) {
+    console.log('Bouton cliqué'); // Affiche un message dans la console
+    console.log(
+        event.currentTarget, // Élément qui a attaché l'écouteur d'événement
+        event.preventDefault(), // Annule le comportement par défaut de l'événement
+        event.stopPropagation() // Stoppe la propagation de l'événement vers les parents
+    );
+}
+
+// Ajout d'écouteurs d'événements sur tous les boutons de la page
+document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', onButtonClick, { // Attache la fonction onButtonClick à chaque bouton
+            once: true, // 1 fois
+            preventDefault: false // Erreur preventDefault
+        })
+    });
+
+// Exemple : Écouteur d'événement sur un <div>
+document.querySelector('div').addEventListener('click', function () {
+    console.log('Clic sur le div'); // Affiche un message lorsque le div est cliqué
+}, {
+    capture: true
+});
+
+// EVENTS.JS : Gestion des événements clavier et formulaires
+
+// 1. Gestion des raccourcis clavier
+document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey === true && e.key === 'm') {
+        e.preventDefault(); // Empêche le comportement par défaut
+        console.log("Raccourci clavier Ctrl + M détecté");
+    }
+});
+
+// 2. Gestion des événements de formulaire
+document.querySelector('form').addEventListener('submit', (e) => {
+    e.preventDefault(); // Empêche l'envoi du formulaire
+
+    const form = e.currentTarget; // Référence au formulaire
+    const data = new FormData(form); // Récupération des données
+    const firstname = data.get('firstname'); // Accès au champ 'firstname'
+
+    if (firstname.length < 2) { // Validation simple
+        console.error("Le prénom doit comporter au moins 2 caractères");
+    } else {
+        console.log("Formulaire soumis avec succès :", firstname);
+    }
+});
+
+// 3. Gestion des événements sur les champs d'entrée (input)
+// - `change` : Détecte un changement de valeur après perte du focus
+// - `input` : Détecte les changements en temps réel
+// - `keydown` : Détecte lorsqu'une touche est enfoncée
+document.querySelector('input').addEventListener('change', (e) => {
+    console.log("Changement détecté :", e.currentTarget.value);
+});
+
+document.querySelector('input').addEventListener('input', (e) => {
+    console.log("Saisie en cours :", e.currentTarget.value);
+});
+
+document.querySelector('input').addEventListener('keydown', (e) => {
+    console.log("Touche appuyée :", e.key);
+});
+
+// 4. Autres événements courants
+// - `focus` : Détecte quand un élément (input) reçoit le focus
+// - `blur` : Détecte quand un élément perd le focus
+document.querySelector('input').addEventListener('focus', (e) => {
+    console.log("Champ d'entrée en focus");
+});
+
+document.querySelector('input').addEventListener('blur', (e) => {
+    console.log("Champ d'entrée a perdu le focus");
+});
+
+// EVENT HANDLERS : Gestion des événements pour les éléments interactifs
+
+// 1. Gestion des événements pour les cases à cocher (checkbox)
+document.querySelector('input[type="checkbox"]').addEventListener('change', (e) => {
+    // `checked` renvoie `true` si la case est cochée, sinon `false`
+    console.log("Checkbox cochée :", e.currentTarget.checked);
+});
+
+// 2. Gestion des événements pour une liste déroulante simple (select)
+document.querySelector('select:not([multiple])').addEventListener('change', (e) => {
+    console.log("Valeur sélectionnée :", e.currentTarget.value);
+    console.log("Option sélectionnée :", e.currentTarget.selectedOptions[0].textContent);
+});
+
+// 3. Gestion des événements pour une liste déroulante multiple (select[multiple])
+document.querySelector('select[multiple]').addEventListener('change', (e) => {
+    console.log(Array.from(e.currentTarget.selectedOptions).map(option => option.value))
+});
+
+// Liens vers la documentation officielle :
+// https://developer.mozilla.org/en-US/docs/Web/API/Event
+
